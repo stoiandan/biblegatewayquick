@@ -12,7 +12,7 @@ get you a new tab opened to your bible verse at biblegateway.com, rather than ch
 Because Protestants love the Bible, and biblegatway is duper awesome, having translations that I love (and no, I have not read the entire bible, yet...) such as NET (New English Translation) that offer tons of explicative footnotes, explaining historical context, langauge subtilities and other things. Or NIV (New International Version) that is super easy to read and understand.
 
 ## Licensing 
-Idk what I'm doing, in the past I've read the *MIT lincense* that I consider super short and usfefull, I just wanted to make this software free and open source, with the 
+Idk what I'm doing, in the past I've read the *MIT lincense* that I consider super short and usfefull, I just wanted to make this software free and open source, with the *Revised BSD license*
 
 
 
