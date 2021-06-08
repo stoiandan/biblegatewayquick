@@ -19,7 +19,7 @@ Idk what I'm doing, in the past I've read the *MIT lincense* that I consider sup
 <p>&nbsp;</p>
 
 ### Am I a duper pious person?
-Not at all, in fact agian I have't even read the whole Bible, so for some people that tells mountains about me, I love things like South Park, etc. I am very sketic at times and have my dark nights of the soul, but I like to hope and think that by the grace of God, I am what I am (1 Corinthians 15:10), says St. Paul, echoed by the Protestant reformer Martin Luther. 
+Not at all, in fact I have't even read the whole Bible, for some people that tells mountains about me, I love things like South Park, I am very sketip at times and have my dark nights of the soul. But, I like to hope and think that by the grace of God, *I am what I am* (1 Corinthians 15:10), says St. Paul, echoed by the Protestant reformer Martin Luther. 
 
 
 ### I have a dream...
