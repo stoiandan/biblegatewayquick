@@ -4,8 +4,8 @@ Make a quick search for a Bible verse on the most awesome protestant [biblegatew
 ## What's the idea 
 
 There already is a Firefox plugin to add biblegateway.com as a search engine, created by *Narwhals Dermal*, which is duper cool.
-However the idea of thi Firefox plugin is to allow you a quick, context menu search (i.e. when you right click a select text) to 
-get you a new tab opened to your bible verse at biblegateway.com, rather than changing your search engine.
+However the idea of this Firefox plugin is to allow you a quick, context menu search (i.e. when you right click a select text) 
+geting a new tab opened to your bible verse at biblegateway.com, rather than changing your search engine.
 
 ## Why Biblegateway.com
 
