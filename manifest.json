@@ -7,7 +7,7 @@
     "description": "Make quick searches in the Bible using biblegateway.com",
   
     "icons": {
-      "48": "icons/border-48.png"
+      "48": "assets/icons/search_icon_48.png"
     },
   
     "content_scripts": [
