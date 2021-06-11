@@ -9,6 +9,15 @@
     "icons": {
       "48": "assets/icons/search_icon_48.png"
     },
+    
+    "permissions" : [
+        "menus",
+        "activeTab"
+    ],
+
+    "background": {
+        "scripts": ["src/menu.js"]
+    },
   
     "content_scripts": [
       {
