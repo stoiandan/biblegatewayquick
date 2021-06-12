@@ -1,6 +1,9 @@
 # biblegatewayquick
 Make a quick search for a Bible verse on the most awesome protestant [biblegateway.com](https://www.biblegateway.com/)
 
+![biblegatewayquick context menu entry](https://user-images.githubusercontent.com/10388612/121775563-2d8f6200-cb91-11eb-9422-e2592c9c99bb.png)
+
+
 ## What's the idea 
 
 There already is a Firefox plugin to add biblegateway.com as a search engine, created by *Narwhals Dermal*, which is duper cool.
