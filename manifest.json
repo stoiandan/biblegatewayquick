@@ -16,7 +16,10 @@
     ],
 
     "background": {
-        "scripts": ["src/menu.js"]
+        "scripts": ["src/menu.js",
+                    "src/parser.js",
+                    "src/request.js",
+                    "src/error.js"]
     },
   
     "content_scripts": [
