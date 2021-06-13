@@ -61,7 +61,7 @@ class ReferenceParser {
         switch (words.length) {
             //e.g. 1 John 4:3
             case 3:
-                potentialBibleBook = words[1];
+                potentialBibleBook = words.slice(0,2).join(' ');
             break;
             // e.g. John
             case 1:
