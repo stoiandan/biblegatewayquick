@@ -11,9 +11,6 @@ const COLON = ':';
 
 
 class ReferenceParser {
-
-  
-
     constructor() {
         this.numberPrefixes = ['1','2','3'];
         this.wordsPrefixes = { 'first': '1', 'second': '2', 'third': '3' };
@@ -28,7 +25,6 @@ class ReferenceParser {
             "matthew", "mark", "luke", "john", "acts", "romans", "1 corinthians", "2 corinthians", "galatians", "ephesians",
             "philippians", "colossians", "1 thessalonians", "2 thessalonians", "1 timothy", "2 timothy", "titus",
             "philemon", "hebrews", "james", "1 peter", "2 peter", "1 john", "2 john", "3 john", "jude", "revelation"];
-    
     }
 
     parseReference(bibleReference) {
