@@ -1,15 +1,13 @@
 {
   "manifest_version": 2,
   "name": "quick BibleGateway",
-  "version": "1.0",
+  "version": "1.1.0",
   "description": "Make quick searches in the Bible using biblegateway.com",
   "icons": {
     "48": "assets/icons/search_icon_48.png"
   },
   "permissions": [
     "menus",
-    "contextMenus",
-    "activeTab",
     "<all_urls>"
   ],
   "background": {

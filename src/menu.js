@@ -8,7 +8,7 @@
 const parser = new ReferenceParser();
 
 
-browser.contextMenus.onShown.addListener(info => {
+browser.menus.onShown.addListener(info => {
   const isButtonEnabled = handleUserSelection(info.selectionText);
   browser.menus.update(info.menuIds[0], { enabled: isButtonEnabled });
   browser.menus.refresh();
