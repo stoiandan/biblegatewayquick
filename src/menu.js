@@ -4,48 +4,37 @@
     to navigate to biblegateway
 */
 
+// reference parser
+const parser = new ReferenceParser();
 
-// enable or disable button
-let isButtonEnabled = true;
 
-// create context menu button
-browser.menus.create({
-    title: "Search '%s'on biblegateway",
-    contexts: ["selection"],
-    enabled: isButtonEnabled
-  });
-  
-  browser.menus.onClicked.addListener(function(contextInfo, tab) {
-      let words;
-      try {
-        words = handleUserSelection(contextInfo);
-      } catch(err) {
-          return;
-      }
+browser.contextMenus.onShown.addListener(info => {
+  const isButtonEnabled = handleUserSelection(info.selectionText);
+  browser.menus.update(info.menuIds[0], { enabled: isButtonEnabled });
+  browser.menus.refresh();
+});
 
-      // make web request
-      openBibleGateway(words);
+(function createContextMenuEntry() {
+  // create context menu button
+  browser.menus.create({
+    title: "Search '%s' on biblegateway",
+    contexts: ["selection"]
   });
 
+  browser.menus.onClicked.addListener(() => {
+    // make web request
+    openBibleGateway(parser.history.slice(-1).pop().parsed);
+  });
+})();
 
 
-  function handleUserSelection(contextInfo) {
-      const selectedText = contextInfo.selectionText;
 
-      try {
-         if(selectedText === null) throw NotTextError;
-
-         const parser = new ReferenceParser(selectedText);
-
-         const words = parser.parseReference(); 
-
-         isButtonEnabled = true;
-
-         return words;
-      }   catch(err) {
-        //disable button 
-        isButtonEnabled = false;
-        console.log(err);
-        throw err;
-      }   
+function handleUserSelection(selectedText) {
+  try {
+     parser.parseReference(selectedText);
+  } catch (err) {
+    console.log(err);
+    return false;
   }
+  return true;
+}

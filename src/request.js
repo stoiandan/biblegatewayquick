@@ -13,11 +13,11 @@ const BIBLE_VERSION = 'NIV';
 function buildURL(parsedBibleReference) {
     let URL = BIBLE_GATEWAY_URL;
 
-    const URLarhuments  = parsedBibleReference.join('+');
+    const URLarguments  = parsedBibleReference.join('+');
 
     const bibleVersionParam = '&version=' + BIBLE_VERSION;
 
-    return BIBLE_GATEWAY_URL + URLarhuments + bibleVersionParam;
+    return BIBLE_GATEWAY_URL + URLarguments + bibleVersionParam;
 }
 
 

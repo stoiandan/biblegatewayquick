@@ -17,6 +17,9 @@ Because Protestants love the Bible, and biblegatway is duper awesome, having tra
 ## Licensing 
 Idk what I'm doing, in the past I've read the *MIT lincense* that I consider super short and usfefull, I just wanted to make this software free and open source, with the *Revised BSD license*
 
+## Appreciations
+Thanks to  [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
+
 
 
 <p>&nbsp;</p>
@@ -27,3 +30,4 @@ Not at all, in fact I have't even read the whole Bible, for some people that tel
 
 ### I have a dream...
 Maybe one day the Romanian Orthodox Church will collaborate with biblegateway.com and offer their "aproved" version for their faithful to have it *for free* (Protestants rock).
+
