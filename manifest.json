@@ -9,7 +9,7 @@
     "128": "assets/icons/search_icon_128.png"
   },
   "permissions": [
-    "menus",
+    "contextMenus",
     "<all_urls>"
   ],
   "background": {

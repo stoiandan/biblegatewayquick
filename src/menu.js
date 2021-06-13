@@ -8,20 +8,20 @@
 const parser = new ReferenceParser();
 
 
-browser.menus.onShown.addListener(info => {
+browser.contextMenus.onShown.addListener(info => {
   const isButtonEnabled = handleUserSelection(info.selectionText);
-  browser.menus.update(info.menuIds[0], { enabled: isButtonEnabled });
-  browser.menus.refresh();
+  browser.contextMenus.update(info.menuIds[0], { enabled: isButtonEnabled });
+  browser.contextMenus.refresh();
 });
 
 (function createContextMenuEntry() {
   // create context menu button
-  browser.menus.create({
+  browser.contextMenus.create({
     title: "Search '%s' on biblegateway",
     contexts: ["selection"]
   });
 
-  browser.menus.onClicked.addListener(() => {
+  browser.contextMenus.onClicked.addListener(() => {
     // make web request
     openBibleGateway(parser.reference.parsed);
   });
