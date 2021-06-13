@@ -12,13 +12,7 @@ const COLON = ':';
 
 class ReferenceParser {
 
-
-
-    bookPrefixes = {
-        'first': '1',
-        'second': '2',
-        'third': '3'
-    }
+    prefixes = ['1','2','3'];
 
 
     bibleBooks = [ // All 66 Protestant Bible Books
@@ -51,30 +45,27 @@ class ReferenceParser {
         if (!this.isBibleBook(words)) {
             throw new LocalError(NotABibleReferenceError, 'Selection ${bibleReference} is not a valid Bible reference');
         }
-        this.history.push({ text: bibleReference, parsed: words });
+        // if only book, add automatically chapter 1 as beginning 
+        const isBookWithNoChapter = words.length === 1 || (words.length == 2 && this.prefixes.includes(words[0]));
+        if(isBookWithNoChapter) {
+            words.push('1');
+        }
+
+        this.reference = { text: bibleReference, parsed: words };
         return words;
     }
 
 
     isBibleBook(words) {
+        this.correctBookPrefix(words);
+
         let potentialBibleBook;
-        switch (words.length) {
-            //e.g. 1 John 4:3
-            case 3:
-                potentialBibleBook = words.slice(0,2).join(' ');
-            break;
-            // e.g. John
-            case 1:
-                // for url add first chapter
-                words.push('1');
 
-            // eg. Mark 3:3
-            case 2:
-                potentialBibleBook = words[0]
-            break;
-
-            default:
-                return false;
+        // concat prefix to bible book
+        if(this.prefixes.includes(words[0])) {
+            potentialBibleBook = words.slice(0, 2).join(' ');
+        } else {
+            potentialBibleBook = words[0    ]
         }
 
         potentialBibleBook = potentialBibleBook.toLowerCase();
@@ -84,5 +75,12 @@ class ReferenceParser {
         }
 
         return true;
+    }
+
+    correctBookPrefix(words) {
+        const bookPrefixes = { 'first': '1', 'second': '2', 'third': '3' };
+        if (words[0] in bookPrefixes) {
+            words[0] = bookPrefixes[words[0]];
+        } 
     }
 }
