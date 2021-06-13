@@ -15,9 +15,7 @@ class ReferenceParser {
   
 
     constructor() {
-        this.history = [];
         this.numberPrefixes = ['1','2','3'];
-
         this.wordsPrefixes = { 'first': '1', 'second': '2', 'third': '3' };
         this.bibleBooks = [ // All 66 Protestant Bible Books
             // Old Testmanet
@@ -79,9 +77,8 @@ class ReferenceParser {
     }
 
     correctBookPrefix(words) {
-        const 
-        if (words[0] in wordsPrefixes) {
-            words[0] = wordsPrefixes[words[0]];
+        if (words[0] in this.wordsPrefixes) {
+            words[0] = this.wordsPrefixes[words[0]];
         } 
     }
 }
