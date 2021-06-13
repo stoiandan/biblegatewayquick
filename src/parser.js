@@ -64,7 +64,7 @@ class ReferenceParser {
         if(this.numberPrefixes.includes(words[0])) {
             potentialBibleBook = words.slice(0, 2).join(' ');
         } else {
-            potentialBibleBook = words[0    ]
+            potentialBibleBook = words[0];
         }
 
         potentialBibleBook = potentialBibleBook.toLowerCase();
