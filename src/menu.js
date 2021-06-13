@@ -23,7 +23,7 @@ browser.contextMenus.onShown.addListener(info => {
 
   browser.menus.onClicked.addListener(() => {
     // make web request
-    openBibleGateway(parser.history.slice(-1).pop().parsed);
+    openBibleGateway(parser.history.pop().parsed);
   });
 })();
 
