@@ -1,5 +1,5 @@
 # biblegatewayquick
-Make a quick search for a Bible verse on the most awesome protestant [biblegateway.com](https://www.biblegateway.com/)
+Make a quick search for a Bible verse on the most awesome Protestant [biblegateway.com](https://www.biblegateway.com/)
 
 
 ![presentation](https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif)
