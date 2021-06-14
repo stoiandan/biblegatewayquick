@@ -25,7 +25,7 @@ In the past I've read the *MIT license* that I consider super short and useful. 
 ## Appreciations
 Thanks to:
 - [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
--  [Shlomi Fish](https://github.com/shlomif) (aka Rindolf) for providing text correction (God knows I need help there)
+-  [Shlomi Fish](https://github.com/shlomif) (aka Rindolf) for providing text corrections (God knows I need help there)
 
 
 <p>&nbsp;</p>
