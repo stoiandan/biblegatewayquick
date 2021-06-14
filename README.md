@@ -23,8 +23,9 @@ Because Protestants love the Bible, and biblegatway is super awesome, having tra
 In the past I've read the *MIT license* that I consider super short and useful. This time, I just wanted to make this software free and open source, with the *Revised BSD license*.
 
 ## Appreciations
-Thanks to  [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
-
+Thanks to:
+- [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
+-  Shlomi Fish (aka Rindolf) for providing text correction (God knows I need help there)
 
 
 <p>&nbsp;</p>
