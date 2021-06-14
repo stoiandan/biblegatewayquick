@@ -10,16 +10,17 @@ Make a quick search for a Bible verse on the most awesome Protestant [biblegatew
 
 ## What's the idea 
 
-There already is a Firefox plugin to add biblegateway.com as a search engine, created by *Narwhals Dermal*, which is duper cool.
-However the idea of this Firefox plugin is to allow you a quick, context menu search (i.e. when you right click a select text) 
-geting a new tab opened to your bible verse at biblegateway.com, rather than changing your search engine.
+There already is a Firefox plugin to add biblegateway.com as a search engine, created by *Narwhals Dermal*, which is super cool.
+However the idea of this Firefox plugin is to allow you a quick, context menu search (i.e. when you right click a select text),
+getting a new tab opened to your bible verse at biblegateway.com, rather than changing your search engine.
 
 ## Why Biblegateway.com
 
-Because Protestants love the Bible, and biblegatway is duper awesome, having translations that I love (and no, I have not read the entire bible, yet...) such as NET (New English Translation) that offer tons of explicative footnotes, explaining historical context, langauge subtilities and other things. Or NIV (New International Version) that is super easy to read and understand.
+Because Protestants love the Bible, and biblegatway is super awesome, having translations that I love (and no, I have not read the entire bible, yet...) such as NET (New English Translation) that offer tons of explicative footnotes, explaining historical context, language subtleties and other things. Or NIV (New International Version) that is super easy to read and understand.
 
-## Licensing 
-Idk what I'm doing, in the past I've read the *MIT lincense* that I consider super short and usfefull, I just wanted to make this software free and open source, with the *Revised BSD license*
+## Licensing
+
+In the past I've read the *MIT license* that I consider super short and useful. This time, I just wanted to make this software free and open source, with the *Revised BSD license*.
 
 ## Appreciations
 Thanks to  [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
