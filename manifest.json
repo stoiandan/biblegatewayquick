@@ -12,12 +12,17 @@
     "contextMenus",
     "<all_urls>"
   ],
+  "browser_action": {
+    "default_title": "quick BibleGateway",
+    "default_popup": "src/action/quickBible.html"
+  },
   "background": {
     "scripts": [
       "src/parser.js",
       "src/menu.js",
       "src/request.js",
-      "src/error.js"
+      "src/error.js",
+      "src/browserAction.js"
     ]
   }
 }

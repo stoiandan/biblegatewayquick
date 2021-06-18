@@ -7,7 +7,7 @@
 const BIBLE_GATEWAY_URL = 'https://www.biblegateway.com/quicksearch/?search=';
 
 
-const BIBLE_VERSION = 'NIV';
+var BIBLE_VERSION = 'NIV';
 
 
 function buildURL(parsedBibleReference) {
