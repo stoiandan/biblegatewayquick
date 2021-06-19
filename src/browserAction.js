@@ -19,8 +19,10 @@ browser.runtime.onMessage.addListener(req => {
     }
     BIBLE_VERSION = req.bible;
 
-    //store to disk 
-    browser.storage.local.set({bible: BIBLE_VERSION});
+    //store to local storage 
+    browser.storage.local.set({ bible: BIBLE_VERSION}).then( () => console.log(`Stored ${BIBLE_VERSION} in storage`),
+     err => console.log(`Could not store ${BIBLE_VERSION} in local storage due to ${err}`)
+    );
     return Promise.resolve('done!');
 });
 
@@ -32,3 +34,4 @@ browser.runtime.onMessage.addListener(req => {
     }
     return false;
 });
+

@@ -7,8 +7,10 @@
 const BIBLE_GATEWAY_URL = 'https://www.biblegateway.com/quicksearch/?search=';
 
 
-var BIBLE_VERSION = await browser.storage.local.get('bible').bible || 'NIV';
+var BIBLE_VERSION = 'NIV';
 
+// initialize bible version
+browser.storage.local.get('bible').then(resp => BIBLE_VERSION = resp.bible || BIBLE_VERSION);
 
 function buildURL(parsedBibleReference) {
     let URL = BIBLE_GATEWAY_URL;
