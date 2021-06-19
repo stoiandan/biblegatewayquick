@@ -4,7 +4,7 @@ Make a quick search for a Bible verse on the most awesome Protestant [biblegatew
 <p float="left">
 <img src="https://user-images.githubusercontent.com/10388612/122646021-e91e3c00-d125-11eb-97f1-614ac40abb94.png" alt="drawing" width="250"/>
 
-<img src="https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif" alt="drawing" width="710"/>
+<img src="https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif" alt="drawing" width="700"/>
 </p>
 
 ## What's the idea 
