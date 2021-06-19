@@ -18,6 +18,9 @@ browser.runtime.onMessage.addListener(req => {
         return Promise.reject('no such Bible version in list');
     }
     BIBLE_VERSION = req.bible;
+
+    //store to disk 
+    browser.storage.local.set({bible: BIBLE_VERSION});
     return Promise.resolve('done!');
 });
 
