@@ -22,7 +22,8 @@
       "src/menu.js",
       "src/request.js",
       "src/error.js",
-      "src/browserAction.js"
+      "src/browserAction.js",
+      "src/messages.js"
     ]
   }
 }
