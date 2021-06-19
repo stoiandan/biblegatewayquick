@@ -1,12 +1,11 @@
 # biblegatewayquick
 Make a quick search for a Bible verse on the most awesome Protestant [biblegateway.com](https://www.biblegateway.com/)
 
+<p float="left">
+<img src="https://user-images.githubusercontent.com/10388612/122646021-e91e3c00-d125-11eb-97f1-614ac40abb94.png" alt="drawing" width="250"/>
 
-![presentation](https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif)
-
-
-![biblegatewayquick context menu entry](https://user-images.githubusercontent.com/10388612/121775563-2d8f6200-cb91-11eb-9422-e2592c9c99bb.png)
-
+<img src="https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif" alt="drawing" width="710"/>
+</p>
 
 ## What's the idea 
 
