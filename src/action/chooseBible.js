@@ -9,15 +9,15 @@ const errorMessage = document.querySelector('#errorMessage');
 
 
 //get last selected version
-browser.runtime.sendMessage({message: GET_VERISON}).then((version) => {
-    selector.value = version;
-    inputField.value = version;
+browser.runtime.sendMessage({message: GET_VERISON}).then( version => {
+    inputField.value = selector.value = version;
 });
 
 //get select element
 selector.addEventListener('change', async event => {
-    await browser.runtime.sendMessage({message: SET_VERSION, bible: event.target.value});
-    inputField.value = event.target.value;
+    const newTranslation = event.target.value;
+    await browser.runtime.sendMessage({message: SET_VERSION, bible: newTranslation });
+    inputField.value = newTranslation;
 });
 
 inputButton.addEventListener('click', async event => {
@@ -29,8 +29,10 @@ inputButton.addEventListener('click', async event => {
 
     if (value in bibleVersions){
         errorMessage.innerHTML = "";
-        inputField.value = bibleVersions[value];
+        inputField.value = value;
         await browser.runtime.sendMessage({message: SET_VERSION, bible: value});
+        // close browser action dialog uppon valid input
+        window.close();
     }else{
         errorMessage.innerHTML = "That is not a valid choice."
     }
