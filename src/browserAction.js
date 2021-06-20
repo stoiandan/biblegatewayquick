@@ -4,8 +4,6 @@
     Also responsible for providing latest version to front-end;
 */
 
-const BIBLES = ['NIV', 'NET', 'ESV', 'KJV', 'NKJV'];
-
 // listen to user changes on current bible translation
 browser.runtime.onMessage.addListener(req => {
     // for security reasons, not to inject random strings
@@ -13,12 +11,6 @@ browser.runtime.onMessage.addListener(req => {
         // needed for multiple message listener; 
         return false;
     }
-
-    //We shouldn't check this because the information is already validated and BIBLES does not contain all possible bibles
-    
-    /*if (!BIBLES.includes(req.bible)) {
-        return Promise.reject('no such Bible version in list');
-    }*/
     BIBLE_VERSION = req.bible;
 
     //store to local storage 
