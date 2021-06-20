@@ -25,6 +25,7 @@ In the past I've read the *MIT license* that I consider super short and useful. 
 Thanks to:
 - [aruljohn](https://github.com/aruljohn)  for providing the Protestant Canon list :) 
 -  [Shlomi Fish](https://github.com/shlomif) (aka Rindolf) for providing text corrections (God knows I need help there)
+- [jbust97](https://github.com/jbust97) for improving user experience by implementing a feature which allows custom traslations to be used
 
 
 <p>&nbsp;</p>
