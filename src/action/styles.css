@@ -1,4 +1,5 @@
 
-#bibleVersionInputField{
-    width: 100px;
+#errorMessage{
+    font-size: 80%;
+    color: red;
 }

@@ -14,9 +14,11 @@ browser.runtime.onMessage.addListener(req => {
         return false;
     }
 
-    if (!BIBLES.includes(req.bible)) {
+    //We shouldn't check this because the information is already validated and BIBLES does not contain all possible bibles
+    
+    /*if (!BIBLES.includes(req.bible)) {
         return Promise.reject('no such Bible version in list');
-    }
+    }*/
     BIBLE_VERSION = req.bible;
 
     //store to local storage 

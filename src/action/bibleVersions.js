@@ -60,5 +60,5 @@ const bibleVersions = {
 "WEB" : "World English Bible (WEB)",
 "WE" : "Worldwide English (New Testament) (WE)",
 "WYC" : "Wycliffe Bible (WYC)",
-"YLT" : "Young&#039;s Literal Translation (YLT)",
+"YLT" : "Young&#039;s Literal Translation (YLT)"
 };
