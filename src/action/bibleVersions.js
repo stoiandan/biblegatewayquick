@@ -38,7 +38,7 @@ const bibleVersions = {
 "NCB" : "New Catholic Bible (NCB)",
 "NCV" : "New Century Version (NCV)",
 "NET" : "New English Translation (NET)",
-"NIRV" : "New International Reader&#039;s Version (NIRV)",
+"NIRV" : "New International Reader's Version (NIRV)",
 "NIV"  : "New International Version (NIV)",
 "NIVUK" : "New International Version - UK (NIVUK)",
 "NKJV" : "New King James Version (NKJV)",
@@ -60,5 +60,5 @@ const bibleVersions = {
 "WEB" : "World English Bible (WEB)",
 "WE" : "Worldwide English (New Testament) (WE)",
 "WYC" : "Wycliffe Bible (WYC)",
-"YLT" : "Young&#039;s Literal Translation (YLT)"
+"YLT" : "Young's Literal Translation (YLT)"
 };

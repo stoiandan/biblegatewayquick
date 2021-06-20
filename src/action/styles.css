@@ -1,4 +1,9 @@
 
+#bibleVersionInputField{
+    width: 80%;
+    margin-right: 5px;
+}
+
 #errorMessage{
     font-size: 80%;
     color: red;

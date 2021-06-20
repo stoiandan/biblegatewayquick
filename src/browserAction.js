@@ -10,7 +10,7 @@ const BIBLES = ['NIV', 'NET', 'ESV', 'KJV', 'NKJV'];
 browser.runtime.onMessage.addListener(req => {
     // for security reasons, not to inject random strings
     if (req.message !== SET_VERSION) {
-        // needed for multiple message listener; 
+        // needed for multiple messag listener; 
         return false;
     }
 

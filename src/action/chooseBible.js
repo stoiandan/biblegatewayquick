@@ -17,10 +17,15 @@ browser.runtime.sendMessage({message: GET_VERISON}).then((version) => {
 //get select element
 selector.addEventListener('change', async event => {
     await browser.runtime.sendMessage({message: SET_VERSION, bible: event.target.value});
+    inputField.value = event.target.value;
 });
 
 inputButton.addEventListener('click', async event => {
-    const value =  inputField.value;
+    /*
+        When "ok" is pressed it checks if the string is a valid translation.
+        If it is, it changes the selected translation.
+    */
+    const value =  inputField.value.toUpperCase();
 
     if (value in bibleVersions){
         errorMessage.innerHTML = "";
