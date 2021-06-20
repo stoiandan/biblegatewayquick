@@ -12,12 +12,14 @@
         <option value="ESV">ESV (English Standard Version)</option>
         <option value="KJV">KJV (King James Version)</option>
         <option value="NKJV">NKJV (New King James Version)</option>
+        <option value="CUSTOM">Choose other BibleGateway translation</option>
     </select><br/><br/>
-    <label for="bibleVersionInputField">Or enter the translation's abbreviation:</label><br/><br/>
-    <input type="text" id="bibleVersionInputField"/><button type="submit" id="inputButton">Ok</button> 
-    <br/>
-    <span id="errorMessage"></span>
-    
+    <div class="custom_area">
+        <label for="bibleVersionInputField">Enter a translation's abbreviation:</label><br/><br/>
+        <input type="text" id="bibleVersionInputField"/><button type="submit" id="inputButton">Ok</button> 
+        <br/>
+        <span id="errorMessage"></span>
+    </div>
     <script src="bibleVersions.js"></script>
     <script src="chooseBible.js"></script>
 </body>

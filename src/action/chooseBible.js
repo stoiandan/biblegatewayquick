@@ -2,11 +2,13 @@ const GET_VERISON = 'getVersion';
 
 const SET_VERSION = 'setVersion';
 
+const selectorBibles = ['NIV','NET','KJV','NKJV','ESV'];
+
 const selector = document.querySelector('#bibleVersion');
 const inputField = document.querySelector('#bibleVersionInputField');
 const inputButton = document.querySelector('#inputButton');
 const errorMessage = document.querySelector('#errorMessage');
-
+const customAreaDiv = document.querySelector('div.custom_area');
 
 //get last selected version
 browser.runtime.sendMessage({message: GET_VERISON}).then( version => {
@@ -15,9 +17,12 @@ browser.runtime.sendMessage({message: GET_VERISON}).then( version => {
 
 //get select element
 selector.addEventListener('change', async event => {
-    const newTranslation = event.target.value;
+    const newVal = event.target.value;
+    handleCustomArea(newVal);
+    if(newVal === 'CUSTOM') return;
+    
     await browser.runtime.sendMessage({message: SET_VERSION, bible: newTranslation });
-    inputField.value = newTranslation;
+    window.close();
 });
 
 inputButton.addEventListener('click', async event => {
@@ -31,10 +36,16 @@ inputButton.addEventListener('click', async event => {
         errorMessage.innerHTML = "";
         inputField.value = value;
         await browser.runtime.sendMessage({message: SET_VERSION, bible: value});
-        // close browser action dialog uppon valid input
         window.close();
     }else{
         errorMessage.innerHTML = "That is not a valid choice."
     }
 });
 
+
+async function handleCustomArea(newVal) {
+        if(newVal === 'CUSTOM') 
+            customAreaDiv.style.display = 'block';
+        else
+        customAreaDiv.style.display = 'none';
+}

@@ -8,3 +8,7 @@
     font-size: 80%;
     color: red;
 }
+
+.custom_area {
+    display: none;
+}
