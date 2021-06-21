@@ -2,7 +2,10 @@ const GET_VERISON = 'getVersion';
 
 const SET_VERSION = 'setVersion';
 
-const selectorBibles = ['NIV','NET','KJV','NKJV','ESV'];
+
+const CUSTOM = 'CUSTOM';
+
+
 
 const selector = document.querySelector('#bibleVersion');
 const inputField = document.querySelector('#bibleVersionInputField');
@@ -11,17 +14,19 @@ const errorMessage = document.querySelector('#errorMessage');
 const customAreaDiv = document.querySelector('div.custom_area');
 
 //get last selected version
-browser.runtime.sendMessage({message: GET_VERISON}).then( version => {
-    inputField.value = selector.value = version;
+browser.runtime.sendMessage({message: GET_VERISON}).then( translation => {
+    handleTranslationChange(translation);
 });
 
 //get select element
 selector.addEventListener('change', async event => {
     const newVal = event.target.value;
-    handleCustomArea(newVal);
-    if(newVal === 'CUSTOM') return;
+    const translation = getTranslation(newVal);
+
+    handleTranslationChange(translation);
+    if(newVal === CUSTOM) return;
     
-    await browser.runtime.sendMessage({message: SET_VERSION, bible: newTranslation });
+    await browser.runtime.sendMessage({message: SET_VERSION, bible: newVal, isCustom: false });
     window.close();
 });
 
@@ -32,20 +37,38 @@ inputButton.addEventListener('click', async event => {
     */
     const value =  inputField.value.toUpperCase();
 
-    if (value in bibleVersions){
-        errorMessage.innerHTML = "";
-        inputField.value = value;
-        await browser.runtime.sendMessage({message: SET_VERSION, bible: value});
-        window.close();
-    }else{
-        errorMessage.innerHTML = "That is not a valid choice."
+    const translation = getTranslation(value);
+
+    if (!translation.isValid){
+        errorMessage.innerHTML = "That is not a valid choice.";
+        return;
     }
+        errorMessage.innerHTML = "";
+        await browser.runtime.sendMessage({message: SET_VERSION, bible: translation.bible, isCustom: translation.isCustom});
+        window.close();
 });
 
 
-async function handleCustomArea(newVal) {
-        if(newVal === 'CUSTOM') 
+async function handleTranslationChange(translation) {
+        if(translation.isCustom) {
             customAreaDiv.style.display = 'block';
-        else
-        customAreaDiv.style.display = 'none';
+            selector.value = CUSTOM;
+            inputField.value = translation.bible;
+        }  else {
+            customAreaDiv.style.display = 'none';
+            inputField.value = selector.value = translation.bible;
+        }
+}
+
+function getTranslation(value) {
+    if(value === CUSTOM) return {bible: inputField.value,  isCustom: true};
+
+    if(dropwDownTranslations.includes(value)){
+        return {bible: value, isCustom: false, isValid: true};
+    }
+
+    if(customTranslations.includes(value)) {
+        return {bible: value, isCustom: true, isValid: true};
+    }
+    return {isValid: false};
 }

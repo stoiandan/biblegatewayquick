@@ -11,11 +11,12 @@ browser.runtime.onMessage.addListener(req => {
         // needed for multiple message listener; 
         return false;
     }
-    BIBLE_VERSION = req.bible;
+
+    BIBLE_VERSION =  {bible: req.bible, isCustom: req.isCustom};
 
     //store to local storage 
-    browser.storage.local.set({ bible: BIBLE_VERSION}).then( () => console.log(`Stored ${BIBLE_VERSION} in storage`),
-     err => console.log(`Could not store ${BIBLE_VERSION} in local storage due to ${err}`)
+    browser.storage.local.set({BIBLE_VERSION}).then( () => console.log(`Stored ${JSON.stringify(BIBLE_VERSION)} in storage`),
+     err => console.log(`Could not store ${JSON.stringify(BIBLE_VERSION)} in local storage due to ${err}`)
     );
     return Promise.resolve('done!');
 });
