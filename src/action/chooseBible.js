@@ -14,9 +14,8 @@ const errorMessage = document.querySelector('#errorMessage');
 const customAreaDiv = document.querySelector('div.custom_area');
 
 //get last selected version
-browser.runtime.sendMessage({message: GET_VERISON}).then( translation => {
-    handleTranslationChange(translation);
-});
+browser.runtime.sendMessage({message: GET_VERISON})
+               .then(translation => handleTranslationChange(translation));
 
 //get select element
 selector.addEventListener('change', async event => {
@@ -35,16 +34,16 @@ inputButton.addEventListener('click', async event => {
         When "ok" is pressed it checks if the string is a valid translation.
         If it is, it changes the selected translation.
     */
-    const value =  inputField.value.toUpperCase();
+    const value = inputField.value.toUpperCase();
 
-    const translation = getTranslation(value);
-
-    if (!translation.isValid){
-        errorMessage.innerHTML = "That is not a valid choice.";
+     try {
+        const translation = getTranslation(value); 
+        await browser.runtime.sendMessage({message: SET_VERSION, bible: translation.bible, isCustom: translation.isCustom});
+    } catch(err) {
+        errorMessage.innerHTML = err;
         return;
     }
         errorMessage.innerHTML = "";
-        await browser.runtime.sendMessage({message: SET_VERSION, bible: translation.bible, isCustom: translation.isCustom});
         window.close();
 });
 
@@ -64,11 +63,11 @@ function getTranslation(value) {
     if(value === CUSTOM) return {bible: inputField.value,  isCustom: true};
 
     if(dropwDownTranslations.includes(value)){
-        return {bible: value, isCustom: false, isValid: true};
+        return {bible: value, isCustom: false};
     }
 
     if(customTranslations.includes(value)) {
-        return {bible: value, isCustom: true, isValid: true};
+        return {bible: value, isCustom: true};
     }
-    return {isValid: false};
+    throw 'that is not a valid choice.';
 }
