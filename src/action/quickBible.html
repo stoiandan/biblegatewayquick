@@ -3,8 +3,12 @@
     <header>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css">
+        <script src="bibleVersions.js"></script>
     </header>  
 <body>
+    <p id="verseOfTheDay">
+    
+    </p>
     <label for="bibleVersion">Choose Bible translation:</label>
     <select id="bibleVersion">
         <option value="NIV">NIV (New International Version)</option>
@@ -20,7 +24,7 @@
         <br/>
         <span id="errorMessage"></span>
     </div>
-    <script src="bibleVersions.js"></script>
     <script src="chooseBible.js"></script>
+    <script src="news_feed/xmlParser.js"></script>
 </body>
 </html>
