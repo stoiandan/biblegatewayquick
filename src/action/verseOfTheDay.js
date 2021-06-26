@@ -1,4 +1,4 @@
-import { MESSAGES } from "./messages.js";
+import { MESSAGES } from "./modules/messages.js";
 
 
 

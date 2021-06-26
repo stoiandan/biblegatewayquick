@@ -1,6 +1,6 @@
 
-import { MESSAGES } from "./messages.js";
-import { dropwDownTranslations, customTranslations } from "./bibleVersions.js";
+import { MESSAGES } from "./modules/messages.js";
+import { dropwDownTranslations, customTranslations } from "./modules/bibleVersions.js";
 
 const CUSTOM = 'CUSTOM';
 
