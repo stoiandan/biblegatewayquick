@@ -24,7 +24,8 @@
       "src/request.js",
       "src/error.js",
       "src/browserAction.js",
-      "src/messages.js"
+      "src/messages.js",
+      "src/verseOfTheDay.js"
     ]
   }
 }

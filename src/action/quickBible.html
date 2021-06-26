@@ -6,9 +6,12 @@
         <script src="bibleVersions.js"></script>
     </header>  
 <body>
+    <fieldset class="bord">
     <p id="verseOfTheDay">
         Loading verse of the day from bibilegateway.com...
     </p>
+    <legend>Verse of the day</legend>
+    </fieldset>
     <label for="bibleVersion">Choose Bible translation:</label>
     <select id="bibleVersion">
         <option value="NIV">NIV (New International Version)</option>
@@ -24,7 +27,7 @@
         <br/>
         <span id="errorMessage"></span>
     </div>
+    <script src="verseOfTheDay.js"></script>
     <script src="chooseBible.js"></script>
-    <script src="news_feed/xmlParser.js"></script>
 </body>
 </html>

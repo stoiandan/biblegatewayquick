@@ -2,6 +2,8 @@ const GET_VERISON = 'getVersion';
 
 const SET_VERSION = 'setVersion';
 
+const GET_VERSE_OF_THE_DAY = 'getVerseOfTheDay';
+
 
 const CUSTOM = 'CUSTOM';
 
