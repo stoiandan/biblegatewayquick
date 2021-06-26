@@ -2,9 +2,13 @@
 Make a quick search for a Bible verse on the most awesome Protestant [biblegateway.com](https://www.biblegateway.com/)
 
 <p float="left">
-<img src="https://user-images.githubusercontent.com/10388612/122646021-e91e3c00-d125-11eb-97f1-614ac40abb94.png" alt="drawing" width="300"/>
+<img src="https://user-images.githubusercontent.com/10388612/123511909-f9d23300-d68c-11eb-86ee-345c9b15abd1.png" alt="drawing" width="770"/>
+<p>Choose your favorite transltaion</p>
+  
+  </br>  </br>  </br> 
 
 <img src="https://user-images.githubusercontent.com/10388612/121818245-a2949180-cc8e-11eb-8acc-1743ba8e3ed0.gif" alt="drawing" width="750"/>
+<p>Quickly find a biblical reference</p>
 </p>
 
 ## What's the idea 
