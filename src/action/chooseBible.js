@@ -1,13 +1,8 @@
-const GET_VERISON = 'getVersion';
 
-const SET_VERSION = 'setVersion';
-
-const GET_VERSE_OF_THE_DAY = 'getVerseOfTheDay';
-
+import { MESSAGES } from "./messages.js";
+import { dropwDownTranslations, customTranslations } from "./bibleVersions.js";
 
 const CUSTOM = 'CUSTOM';
-
-
 
 const selector = document.querySelector('#bibleVersion');
 const inputField = document.querySelector('#bibleVersionInputField');
@@ -16,7 +11,7 @@ const errorMessage = document.querySelector('#errorMessage');
 const customAreaDiv = document.querySelector('div.custom_area');
 
 //get last selected version
-browser.runtime.sendMessage({message: GET_VERISON})
+browser.runtime.sendMessage({message: MESSAGES.GET_VERISON})
                .then(translation => handleTranslationChange(translation));
 
 //get select element
@@ -27,7 +22,7 @@ selector.addEventListener('change', async event => {
     handleTranslationChange(translation);
     if(newVal === CUSTOM) return;
     
-    await browser.runtime.sendMessage({message: SET_VERSION, bible: newVal, isCustom: false });
+    await browser.runtime.sendMessage({message: MESSAGES.SET_VERSION, bible: newVal, isCustom: false });
     window.close();
 });
 
@@ -40,7 +35,7 @@ inputButton.addEventListener('click', async event => {
 
      try {
         const translation = getTranslation(value); 
-        await browser.runtime.sendMessage({message: SET_VERSION, bible: translation.bible, isCustom: translation.isCustom});
+        await browser.runtime.sendMessage({message: MESSAGES.SET_VERSION, bible: translation.bible, isCustom: translation.isCustom});
     } catch(err) {
         errorMessage.innerHTML = err;
         return;
