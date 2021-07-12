@@ -1,5 +1,5 @@
 # biblegatewayquick
-Make a quick search for a Bible verse on the most awesome Protestant [biblegateway.com](https://www.biblegateway.com/). Official Firefox extension can be installed from [here[(https://addons.mozilla.org/en-US/firefox/addon/quick-biblegateway/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search).
+Make a quick search for a Bible verse on the most awesome Protestant [biblegateway.com](https://www.biblegateway.com/). Official Firefox extension can be installed from [here](https://addons.mozilla.org/en-US/firefox/addon/quick-biblegateway/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search).
 
 <p float="left">
 <img src="https://user-images.githubusercontent.com/10388612/123511909-f9d23300-d68c-11eb-86ee-345c9b15abd1.png" alt="drawing" width="770"/>
