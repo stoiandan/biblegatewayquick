@@ -8,7 +8,7 @@ const NEWS_FEED_URL =  'https://www.biblegateway.com/votd/get/?format=atom';
 
 var VERSE_OF_THE_DAY;
 
-var today = new Date().getDay();
+var today = new Date();
 
 async function fetchVerseOfTheDay() {
     return await fetch(NEWS_FEED_URL).then(resp => resp.text())
@@ -27,7 +27,7 @@ async function fetchVerseOfTheDay() {
 browser.runtime.onMessage.addListener(req => {
     if (req.message === GET_VERSE_OF_THE_DAY) {
         // get current day to see if verse has expired
-        const dayNow = new Date().getDay();
+        const dayNow = new Date();
 
         if(!VERSE_OF_THE_DAY || dayNow !== today) {
             VERSE_OF_THE_DAY = fetchVerseOfTheDay();
