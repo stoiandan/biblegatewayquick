@@ -34,10 +34,5 @@ Thanks to:
 
 <p>&nbsp;</p>
 
-### Am I a duper pious person?
-Not at all, in fact I haven't even read the whole Bible. Unfortunately, for some people this speaks mountains about me. I love things like South Park, and I am very sketip at times, having my own dark nights of the soul. But, I like to hope and think that by the grace of God, *I am what I am* (1 Corinthians 15:10), says St. Paul, echoed by the Protestant reformer Martin Luther. 
-
-
-### I have a dream...
-Maybe one day the Romanian Orthodox Church will collaborate with biblegateway.com and offer their "aproved" version for their faithful to have it *for free* (Protestants rock).
-
+### Epilogue
+I like to hope and think that by the grace of God, *I am what I am* (1 Corinthians 15:10), says St. Paul, echoed by the Protestant reformer Martin Luther. 
